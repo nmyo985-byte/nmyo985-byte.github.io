@@ -1,12 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>ကျွနု်ပ်၏ ကိုယ်ရေးအကျဉ်း</title>
+    <!-- Icon များအတွက် FontAwesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117; /* နောက်ခံအမည်းရောင် */
+            --card-bg: #161b22; /* ကတ်ပြားအမည်းရောင် */
+            --text-primary: #c9d1d9; /* ပင်မစာသားအရောင် */
+            --accent: #58a6ff; /* ထင်ရှားစေလိုသောအရောင် (ပြာရောင်) */
+            --border: #30363d; /* အနားသတ်အရောင် */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px; /* ဖုန်းမျက်နှာပြင်အတွက် သင့်တော်သော အကျယ် */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* ကတ်ပြားများကြားအကွာအဝေး */
+        }
+
+        /* ပင်မ Header ကတ်ပြား */
+        .header-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header-card .header-title {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .header-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        /* ပညာအရည်အချင်းနှင့် အလုပ်အကိုင် ကတ်ပြားများ */
+        .info-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-header i {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .card-header h2 {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-title {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .info-subtitle {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .info-desc {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        /* ပြင်ဆင်ရန်ခလုတ် */
+        .edit-btn {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+    </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding: 50px 20px; background-color: #f4f4f9;">
-    <h1>မင်္ဂလာပါ!</h1>
-    <p>ဒါကတော့ ကျွန်တော့်ရဲ့ GitHub Pages Website ဖြစ်ပါတယ်။</p>
+<body>
+
+    <div class="container">
+
+        <!-- ပင်မ Header ကတ်ပြား -->
+        <div class="header-card">
+            <h1 class="header-title">ကိုယ်ရေးအကျဉ်း</h1>
+            <p>ကျွနု်ပ်၏ ကိုယ်ရေးအချက်အလက်များနှင့် လုပ်ငန်းအတွေ့အကြုံများ</p>
+            <a href="https://github.com/nmyo985-byte/nmyo985-byte.github.io/edit/main/index.html" class="edit-btn">
+                <i class="fas fa-edit"></i> ပြင်ဆင်ရန်
+            </a>
+        </div>
+
+        <!-- ပညာအရည်အချင်း ကတ်ပြား -->
+        <div class="info-card">
+            <div class="card-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>ပညာအရည်အချင်း</h2>
+            </div>
+            
+            <div class="info-item">
+                <h3 class="info-title">ကွန်ပျူတာသိပ္ပံဘွဲ့ (B.C.Sc)</h3>
+                <p class="info-subtitle">ကွန်ပျူတာတက္ကသိုလ် (၂၀၀၅-၂၀၁၀)</p>
+                <p class="info-desc">ကွန်ပျူတာ အခြေခံနှင့် Software Engineering ဘာသာရပ်များကို လေ့လာခဲ့သည်။</p>
+            </div>
+        </div>
+
+        <!-- အလုပ်အကိုင် ကတ်ပြား -->
+        <div class="info-card">
+            <div class="card-header">
+                <i class="fas fa-briefcase"></i>
+                <h2>လုပ်ငန်းအတွေ့အကြုံ</h2>
+            </div>
+            
+            <div class="info-item">
+                <h3 class="info-title">Senior Web Developer</h3>
+                <p class="info-subtitle">ABC Technology Co., Ltd. (၂၀၁၅ - လက်ရှိ)</p>
+                <p class="info-desc">HTML, CSS, JavaScript နှင့် Backend နည်းပညာများကို သုံးပြီး Website များ ဖန်တီးခဲ့သည်။</p>
+            </div>
+            
+            <div class="info-item">
+                <h3 class="info-title">Junior Developer</h3>
+                <p class="info-subtitle">XYZ Solutions (၂၀၁၁ - ၂၀၁၅)</p>
+                <p class="info-desc">Web Applications များ၏ Frontend ပိုင်းကို တာဝန်ယူ ရေးသားခဲ့သည်။</p>
+            </div>
+        </div>
+
+        <!-- ဆက်သွယ်ရန် ကတ်ပြား -->
+        <div class="info-card">
+            <div class="card-header">
+                <i class="fas fa-envelope"></i>
+                <h2>ဆက်သွယ်ရန်</h2>
+            </div>
+            
+            <div class="info-item">
+                <p class="info-desc">
+                    <strong>Email:</strong> nmyo985@email.com<br>
+                    <strong>Phone:</strong> +၉၅ ၉ ...<br>
+                    <strong>Location:</strong> ရန်ကုန်မြို့။
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
